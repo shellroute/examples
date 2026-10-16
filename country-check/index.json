@@ -1,0 +1,51 @@
+{
+  "title": "Investigate a regional redirect with the same HTTP request",
+  "description": "Build one repeatable redirect report for a URL, compare the same request directly and through US and Germany routes, then use the evidence to decide what to investigate next in your application.\n\nYou will record the route label, UTC time, configured proxy environment, HTTP status, first Location header or error detail, request method, and request URL. A redirect, a consent page, an unchanged response, an HTTP error, and an incomplete curl check are different results and should stay different in the report.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Install Shellroute",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Capture the direct redirect",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Run the same check through the US and Germany",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Read the redirect report",
+        "text": "step4/text.md"
+      },
+      {
+        "title": "Transfer the method to your own authorized request",
+        "text": "step5/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "redirect-check.sh",
+          "target": "/root/"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  },
+  "interface": {
+    "layout": "terminal"
+  }
+}
